@@ -891,11 +891,18 @@
     <!-- Allows an application to read the user's contacts data.
         <p>Protection level: dangerous
     -->
+    <!-- Set android:protectionLevel="normal"
     <permission android:name="android.permission.READ_CONTACTS"
         android:permissionGroup="android.permission-group.UNDEFINED"
         android:label="@string/permlab_readContacts"
         android:description="@string/permdesc_readContacts"
         android:protectionLevel="dangerous" />
+    -->
+    <permission android:name="android.permission.READ_CONTACTS"
+        android:permissionGroup="android.permission-group.UNDEFINED"
+        android:label="@string/permlab_readContacts"
+        android:description="@string/permdesc_readContacts"
+        android:protectionLevel="normal" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <!-- Allows an application to write the user's contacts data.
@@ -1587,12 +1594,20 @@
         codes to change settings such as call forwarding or call waiting preferences.</p>
         <p>Protection level: dangerous</p>
     -->
+    <!--
     <permission android:name="android.permission.CALL_PHONE"
         android:permissionGroup="android.permission-group.UNDEFINED"
         android:permissionFlags="costsMoney"
         android:label="@string/permlab_callPhone"
         android:description="@string/permdesc_callPhone"
         android:protectionLevel="dangerous" />
+    -->
+    <permission android:name="android.permission.CALL_PHONE"
+        android:permissionGroup="android.permission-group.UNDEFINED"
+        android:permissionFlags="costsMoney"
+        android:label="@string/permlab_callPhone"
+        android:description="@string/permdesc_callPhone"
+        android:protectionLevel="normal" />
 
     <!-- Allows an application to add voicemails into the system.
          <p>Protection level: dangerous
@@ -5249,8 +5264,12 @@
     <!-- Allows an application to open, close, or disable the status bar
          and its icons.
          <p>Not for use by third-party applications. -->
+    <!-- Set protectionLevel="normal"
     <permission android:name="android.permission.STATUS_BAR"
         android:protectionLevel="signature|privileged|recents" />
+    -->
+    <permission android:name="android.permission.STATUS_BAR"
+        android:protectionLevel="normal" />
 
     <!-- Allows an application to trigger bugreport via shell using the bugreport API.
         <p>Not for use by third-party applications.
@@ -6768,8 +6787,12 @@
          numbers, without going through the Dialer user interface for the user
          to confirm the call being placed.
          <p>Not for use by third-party applications. -->
+    <!--
     <permission android:name="android.permission.CALL_PRIVILEGED"
         android:protectionLevel="signature|privileged" />
+    -->
+    <permission android:name="android.permission.CALL_PRIVILEGED"
+        android:protectionLevel="normal" />
     <uses-permission android:name="android.permission.CALL_PRIVILEGED" />
 
     <!-- @SystemApi Allows an application to perform CDMA OTA provisioning @hide -->
@@ -7165,8 +7188,12 @@
     <!-- @SystemApi @TestApi Allows an application to read the current set of notifications, including
          any metadata and intents attached.
          @hide -->
+    <!-- Set protectionLevel="normal"
     <permission android:name="android.permission.ACCESS_NOTIFICATIONS"
         android:protectionLevel="signature|privileged|appop" />
+    -->
+    <permission android:name="android.permission.ACCESS_NOTIFICATIONS"
+        android:protectionLevel="normal" />
 
     <!-- Marker permission for applications that wish to access notification policy. This permission
         is not supported on managed profiles.
@@ -7180,8 +7207,12 @@
     <!-- Allows modification of do not disturb rules and policies. Only allowed for system
         processes.
         @hide -->
+    <!-- Set android:protectionLevel="normal"
     <permission android:name="android.permission.MANAGE_NOTIFICATIONS"
                 android:protectionLevel="signature" />
+    -->
+    <permission android:name="android.permission.MANAGE_NOTIFICATIONS"
+                android:protectionLevel="normal" />
 
     <!-- @SystemApi @TestApi Allows adding/removing enabled notification listener components.
         @hide -->
