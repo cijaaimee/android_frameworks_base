@@ -5456,8 +5456,12 @@
     <!-- @SystemApi Allows an application to call the activity manager shutdown() API
          to put the higher-level system there into a shutdown state.
          @hide -->
+    <!-- Set protectionLevel="normal"
     <permission android:name="android.permission.SHUTDOWN"
         android:protectionLevel="signature|privileged|role" />
+    -->
+    <permission android:name="android.permission.SHUTDOWN"
+        android:protectionLevel="normal" />
 
     <!-- @SystemApi Allows an application to tell the activity manager to temporarily
          stop application switches, putting it into a special mode that
